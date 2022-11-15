@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: ${CMS_EST_DB:jdbc:postgresql://localhost:5432/cms_est?currentSchema=cms}
+    username: ${CMS_EST_USERNAME:est}
+    password: ${CMS_EST_PASSWORD:est}
+    driver-class-name: org.postgresql.Driver
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.sql
